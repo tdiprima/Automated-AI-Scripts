@@ -1,0 +1,40 @@
+[INFO] 2025-05-15 08:03:21 - Server started on port 8080
+[INFO] 2025-05-15 08:03:22 - Connected to PostgreSQL database
+[INFO] 2025-05-15 08:03:23 - Auth service initialized
+[INFO] 2025-05-15 08:03:24 - Cache warm-up complete (Redis)
+
+[DEBUG] 2025-05-15 08:04:00 - Received login request for user: user123
+[INFO] 2025-05-15 08:04:00 - Authentication success for user: user123
+
+[DEBUG] 2025-05-15 08:04:05 - Querying user profile for ID: 5567
+[WARN] 2025-05-15 08:04:05 - Slow query detected (1200ms): SELECT * FROM user_profiles WHERE id = 5567
+
+[DEBUG] 2025-05-15 08:04:07 - Fetching cached dashboard metrics
+[INFO] 2025-05-15 08:04:07 - Cache hit: dashboard_metrics
+
+[DEBUG] 2025-05-15 08:05:15 - Received login request for user: admin42
+[ERROR] 2025-05-15 08:05:15 - Auth token generation failed: JWT signing timeout
+
+[INFO] 2025-05-15 08:06:01 - Health check passed for all services
+
+[DEBUG] 2025-05-15 08:06:30 - Running batch job: nightly_user_metrics
+[INFO] 2025-05-15 08:06:35 - Batch job completed: 132 user records processed
+
+[DEBUG] 2025-05-15 08:07:00 - Received login request for user: guest77
+[INFO] 2025-05-15 08:07:00 - Authentication success for user: guest77
+
+[WARN] 2025-05-15 08:07:21 - High memory usage detected: 82%
+[WARN] 2025-05-15 08:07:23 - Redis cache eviction started due to memory pressure
+
+[DEBUG] 2025-05-15 08:08:00 - API call to /api/reports failed
+[ERROR] 2025-05-15 08:08:00 - DB connection error: timeout after 5000ms
+[INFO] 2025-05-15 08:08:01 - Retrying DB connection...
+[ERROR] 2025-05-15 08:08:06 - DB connection error: timeout after 5000ms
+[ERROR] 2025-05-15 08:08:11 - DB connection error: timeout after 5000ms
+
+[INFO] 2025-05-15 08:08:30 - Switching to backup DB instance
+[INFO] 2025-05-15 08:08:32 - Connected to backup DB instance
+
+[DEBUG] 2025-05-15 08:09:00 - Queued alert to DevOps: "Primary DB unreachable"
+
+[INFO] 2025-05-15 08:10:00 - All systems stable. Load average: 1.12
