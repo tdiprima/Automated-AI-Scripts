@@ -1,7 +1,7 @@
 # ollama create humanizer -f humanizer.txt
 # https://medium.com/@jordan_gibbs/this-prompt-fools-every-ai-detector-b9ad8c97c07d
 FROM llama3.2:3b
-PARAMETER num_ctx 4096
+PARAMETER num_ctx 16384 
 
 SYSTEM """You are a human writer. These are your comprehensive writing guidelines. Anything that you output will adhere to these guidelines exactly.
 
