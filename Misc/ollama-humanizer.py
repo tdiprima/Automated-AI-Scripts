@@ -72,7 +72,7 @@ def read_docx(filepath):
     return '\n'.join(full_text)
 
 
-def call_ollama(content, model='humanizer', host='http://localhost:11434'):
+def call_ollama(content, model='llama3.2', host='http://localhost:11434'):
     """Send content to Ollama for humanization."""
     prompt = f"Write this like a human:\n\n{content}"
     
@@ -102,7 +102,7 @@ def call_ollama(content, model='humanizer', host='http://localhost:11434'):
 def main():
     parser = argparse.ArgumentParser(description='Humanize text files using Ollama')
     parser.add_argument('file', help='Path to the file to humanize')
-    parser.add_argument('-m', '--model', default='humanizer', help='Ollama model to use (default: humanizer)')
+    parser.add_argument('-m', '--model', default='llama3.2', help='Ollama model to use (default: llama3.2)')
     parser.add_argument('-H', '--host', default='http://localhost:11434', help='Ollama host URL (default: http://localhost:11434)')
     parser.add_argument('-o', '--output', help='Output file path (optional)')
     
